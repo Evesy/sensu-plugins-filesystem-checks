@@ -61,7 +61,7 @@ class CheckFileExists < Sensu::Plugin::Check::CLI
     elsif config[:unknown] && File.exist?(config[:unknown])
       unknown "#{config[:unknown]} exists!"
     else
-      ok 'No test files exist'
+      ok 'No matching files found'
     end
   end
 end
